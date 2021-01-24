@@ -65,6 +65,7 @@ class UserdataController extends ApiController {
             );
         }
 
+        // Procesa los datos del body
         $input = $request->all();
         $input["password"] = bcrypt($request->get("password"));
         // Crear nuevo usuario en la db
